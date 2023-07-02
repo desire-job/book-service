@@ -1,14 +1,14 @@
 package com.gmail.apachdima.desirejob.bookservice.service.impl;
 
-import com.gmail.apachdima.desirejob.bookservice.common.Entity;
-import com.gmail.apachdima.desirejob.bookservice.common.message.Error;
 import com.gmail.apachdima.desirejob.bookservice.model.Book;
 import com.gmail.apachdima.desirejob.bookservice.service.BookService;
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookRequestDTO;
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookResponseDTO;
-import com.gmail.apachdima.desirejob.bookservice.exception.EntityNotFoundException;
 import com.gmail.apachdima.desirejob.bookservice.repository.BookRepository;
 import com.gmail.apachdima.desirejob.bookservice.util.mapper.BookMapper;
+import com.gmail.apachdima.desirejob.commonservice.constant.Model;
+import com.gmail.apachdima.desirejob.commonservice.constant.message.CommonError;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookRequestDTO;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookResponseDTO;
+import com.gmail.apachdima.desirejob.commonservice.exception.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;
@@ -60,9 +60,9 @@ public class BookServiceImpl implements BookService {
     }
 
     private Book getBookById(long bookId, Locale locale) {
-        Object[] params = new Object[]{Entity.BOOK.getName(), Entity.BookField.BOOK_ID.getFieldName(), bookId};
+        Object[] params = new Object[]{Model.BOOK.getName(), Model.Field.ID.getFieldName(), bookId};
         return bookRepository.findById(bookId)
             .orElseThrow(() ->
-                new EntityNotFoundException(messageSource.getMessage(Error.ENTITY_NOT_FOUND.getKey(), params, locale)));
+                new EntityNotFoundException(messageSource.getMessage(CommonError.ENTITY_NOT_FOUND.getKey(), params, locale)));
     }
 }

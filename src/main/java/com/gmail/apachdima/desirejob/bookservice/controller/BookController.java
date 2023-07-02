@@ -1,8 +1,8 @@
 package com.gmail.apachdima.desirejob.bookservice.controller;
 
 import com.gmail.apachdima.desirejob.bookservice.service.BookService;
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookRequestDTO;
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookResponseDTO;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookRequestDTO;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookResponseDTO;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

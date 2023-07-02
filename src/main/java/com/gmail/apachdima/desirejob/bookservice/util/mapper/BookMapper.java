@@ -1,7 +1,7 @@
 package com.gmail.apachdima.desirejob.bookservice.util.mapper;
 
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookResponseDTO;
 import com.gmail.apachdima.desirejob.bookservice.model.Book;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookResponseDTO;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
