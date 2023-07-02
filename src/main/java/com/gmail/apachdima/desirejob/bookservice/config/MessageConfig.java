@@ -1,6 +1,6 @@
 package com.gmail.apachdima.desirejob.bookservice.config;
 
-import com.gmail.apachdima.desirejob.bookservice.common.CommonConstant;
+import com.gmail.apachdima.desirejob.commonservice.constant.CommonConstant;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

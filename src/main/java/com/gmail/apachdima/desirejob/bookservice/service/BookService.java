@@ -1,7 +1,7 @@
 package com.gmail.apachdima.desirejob.bookservice.service;
 
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookRequestDTO;
-import com.gmail.apachdima.desirejob.bookservice.dto.book.BookResponseDTO;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookRequestDTO;
+import com.gmail.apachdima.desirejob.commonservice.dto.book.BookResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
