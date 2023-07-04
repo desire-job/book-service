@@ -1,14 +1,8 @@
 package com.gmail.apachdima.desirejob.bookservice.config;
 
-import feign.Client;
-import org.springframework.context.annotation.Bean;
+import com.gmail.apachdima.desirejob.commonservice.config.CommonFeignConfig;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FeignConfig {
-
-    @Bean
-    public Client feignClient() {
-        return new Client.Default(null, null);
-    }
+public class FeignConfig extends CommonFeignConfig {
 }
