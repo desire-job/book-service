@@ -9,3 +9,14 @@ spring:
       username: ${CONFIG_SERVICE_SECURITY_USERNAME}
       password: ${CONFIG_SERVICE_SECURITY_PASSWORD}
       uri: http://${APP_HOST}:${CONFIG_SERVICE_PORT}/${CONFIG_SERVICE_CONTEXT_PATH}
+
+app:
+  ssl:
+    trust-store:
+      password: ${BOOK_SERVICE_SSL_TRUST_STORE_PASSWORD}
+
+server:
+  ssl:
+    key-store: ./book-service/app-keystore.jks
+    key-store-password: ${BOOK_SERVICE_SSL_KEY_STORE_PASSWORD}
+    keyAlias: app-key-store
